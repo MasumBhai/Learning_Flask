@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/static/Single_Form.css"/>
+    <title>Transactions Show</title>
+</head>
+<body>
+<h1>Transaction:</h1>
+{{ entries }} {# This will print as List #}
+<br>
+<ol>
+    {% for data in entries %}
+        <p>{{ data[0] }} : amount {{ data[2] }} $ on date {{ data[1] }}</p>
+    {% endfor %}
+</ol>
+</body>
+</html>
